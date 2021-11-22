@@ -2,22 +2,50 @@ import React, { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { pallete } from "./utils/colors";
+import Sound from "react-native-sound";
+
 interface ButtonProps {
     sound: string;
 }
 
+Sound.setCategory("Playback");
+
+const meow = new Sound("meow.mp3", Sound.MAIN_BUNDLE, error => {
+    if (error) {
+        console.log("failed to load the sound", error);
+        return;
+    }
+    // loaded successfully
+    console.log("duration in seconds: " + meow.getDuration() + "number of channels: " + meow.getNumberOfChannels());
+});
+
 export const CatCallButton = (props: ButtonProps) => {
     const { sound } = props;
 
-    const [soundOn, setSound] = useState<boolean>(false);
     const [pressed, setPressed] = useState<boolean>(false);
+    useEffect(() => {
+        meow.setVolume(1);
+        return () => {
+            meow.release();
+        };
+    }, []);
 
     useEffect(() => {
-        soundOn ? playSound() : null;
-    }, [soundOn]);
+        pressed ? playSound() : stopSound();
+    }, [pressed]);
 
     const playSound = () => {
-        console.log("playingSound", sound);
+        meow.play(success => {
+            try {
+                console.log("successfully finished playing", success);
+            } catch (e) {
+                console.log("can't play sound", e);
+            }
+        });
+    };
+
+    const stopSound = () => {
+        meow.stop();
     };
 
     return (
@@ -36,11 +64,9 @@ export const CatCallButton = (props: ButtonProps) => {
                 }}
                 onPressIn={() => {
                     setPressed(true);
-                    setSound(true);
                 }}
                 onPressOut={() => {
                     setPressed(false);
-                    setSound(false);
                 }}
                 activeOpacity={0.7}
             >

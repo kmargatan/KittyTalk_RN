@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5A6CC571D43DDF1E0C828C29 /* libPods-kittyTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51091C451CB94BFDDD5CFD47 /* libPods-kittyTalk.a */; };
+		80839A5D274AD30000A0E82C /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80839A5C274AD30000A0E82C /* meow.mp3 */; };
 		9213563110F79CCCCA570E06 /* libPods-kittyTalk-kittyTalkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F89AEFC2E6684BC02B1655 /* libPods-kittyTalk-kittyTalkTests.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		6028FDEEA1ED44CDA8198908 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		73D2D8A99381478DB57C2F5A /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		775818ABD4158E2CEDF0FD99 /* Pods-kittyTalk-kittyTalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kittyTalk-kittyTalkTests.release.xcconfig"; path = "Target Support Files/Pods-kittyTalk-kittyTalkTests/Pods-kittyTalk-kittyTalkTests.release.xcconfig"; sourceTree = "<group>"; };
+		80839A5C274AD30000A0E82C /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = meow.mp3; path = "../../../../Downloads/sound-of-cat-meowing/meow.mp3"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = kittyTalk/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B86E6C524934B3588F48DB6 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		8CE64237BA684197BC682A5C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				80839A5C274AD30000A0E82C /* meow.mp3 */,
 				13B07FAE1A68108700A75B9A /* kittyTalk */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* kittyTalkTests */,
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80839A5D274AD30000A0E82C /* meow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

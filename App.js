@@ -7,11 +7,7 @@ export const App = () => {
         <SafeAreaView style={{ flex: 1 }}>
             <View
                 style={{
-                    flex: 1,
-                    borderLeftWidth: 3,
-                    borderRightWidth: 3,
-                    borderLeftColor: `#C498F4`,
-                    borderRightColor: "#C498F4"
+                    flex: 1
                 }}
             >
                 <Home />
